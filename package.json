@@ -1,7 +1,7 @@
 {
   "name": "grunt-wisp",
   "description": "grunt plugin for Wisp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/syuta/grunt-wisp",
   "author": {
     "name": "syuta",
