@@ -1,7 +1,7 @@
 {
   "name": "grunt-wisp",
   "description": "grunt plugin for Wisp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/syuta/grunt-wisp",
   "author": {
     "name": "syuta",
@@ -25,7 +25,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "preinstall": "npm i -g wisp"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.1.1",
@@ -34,9 +34,10 @@
     "grunt": "~0.4.1"
   },
   "dependencies": {
-    "grunt": "~0.4.1",
-    "mkdirp": "~0.3.5",
-    "wisp": "~0.8.0"
+    "mkdirp": "~0.3.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
   },
   "keywords": [
     "gruntplugin"
