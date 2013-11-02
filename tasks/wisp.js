@@ -52,6 +52,11 @@ module.exports = function (grunt) {
             mkdirp.sync(destPath);
             var destFileName = fileName.split(".")[0];//拡張子を除く
             exec('cat ' + file + '| wisp > ' + destPath + destFileName + ".js", function (err, stdout, stderr) {
+                if (err) {
+                    err.message = 'Error compiling ' + file + ': ' + err.message;
+                    done(err);
+                    return;
+                }
                 grunt.log.writeln('File ' + destPath + destFileName + '.js created.');
                 compile(srcBaseDir, path, files, done);
             });
